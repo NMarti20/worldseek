@@ -3,12 +3,22 @@ import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 import worldseek from "./images/worldseek.png";
 import Posts from "./components/Posts/Posts";
 import Form from "./components/Form/Form";
+import usestyles from "./styles";
 const App = () => {
+  const classes = usestyles();
+
   return (
     <Container maxWidth="lg">
-      <AppBar position="static" color="inherit">
-        <Typography variant="h2" align="WorldSeek"></Typography>
-        <img src={worldseek} alt="worldseek" height="60"></img>
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h2" align="WorldSeek">
+          WorldSeek
+        </Typography>
+        <img
+          className={classes.image}
+          src={worldseek}
+          alt="worldseek"
+          height="60"
+        ></img>
       </AppBar>
       <Grow in>
         <Container>
